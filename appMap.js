@@ -205,7 +205,7 @@ var ViewModel = function() {
 			//In error
 			console.log("sorry failed to fetch data");
 			flickrError.text("can't to get flickr resources");
-	    });;
+	    });
     };
 };
 
