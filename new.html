@@ -13,15 +13,13 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-
 <body>
-
     <div class="container-fluid">
         <div class="row">
             <h2 class="text-center">NeighborhoodMapProject</h2>
             <form>
                 <div class="form-group">
-                    <input type="text" id="searchbar" name="searchbar" class="form-control" data-bind="value: search, valueUpdate: 'afterkeydown'" placeholder="Name of search">
+                    <input type="text" id="searchbar" name="searchbar" class="form-control" data-bind="textInput: filterSearch">
                 </div>
             </form>
 
@@ -41,9 +39,9 @@
                                         </button>
                                     </div>
                                     <div id="navbar" class="navbar-collapse collapse">
-                                        <ul class="nav navbar-nav" data-bind="foreach: filteredItems">
+                                        <ul class="nav navbar-nav" data-bind="foreach: search">
                                             <li>
-                                                <a href="#" data-bind="text: $data.name, click: $parent.setPlace"></a>
+                                                <a href="#" data-bind="text: name, click: clicked"></a>
                                             </li>
                                             <br>
                                         </ul>
@@ -55,15 +53,15 @@
                     </div>
                 </div>
                 <div class="row">
-                        <div class="col-sm-12 ig" id="ig" style="display: none;">
-                            <h4>Flickr Photos</h4>
-                            <div id="image-area" data-bind="foreach: { data: imgList, as: 'img' }">
-                                <div class="ig-div">
-                                    <img data-bind="attr: { src : img.url }" />
-                                </div>
+                    <div class="col-sm-12 ig" id="ig" style="display: none;">
+                        <h4>Flickr Photos</h4>
+                        <div id="image-area" data-bind="foreach: { data: imgList, as: 'img' }">
+                            <div class="ig-div">
+                                <img data-bind="attr: { src : img.url }" />
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
 
             <div class="col-md-8">
@@ -75,20 +73,31 @@
                         </div>
                 </div>  
             </div>
+            
+                
+
+        </div>
     </div>
-    </div>
 
-    <!-- Script for Jquery and Bootstrap -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- Script for Jquery and Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-    <!-- Script for Underscore -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+<!-- Script for Underscore -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
 
-    <!-- Logic script -->
-    <script src="appMap.js"></script>
+<!-- Logic script -->
+<!-- <script src="appMap.js"></script> -->
+<script>
+    
+    
+    </script>
+<script src="new.js"></script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW7yX9pbIVfF2br2ShExjwyYxXML711Ok&callback=init" onerror="googleError()"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW7yX9pbIVfF2br2ShExjwyYxXML711Ok&callback=init" onerror="googleMapsError()"></script>
+
 </body>
-
 </html>
