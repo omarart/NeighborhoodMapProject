@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Neighborfood Map</title>
-
     <!--Bootstrap and Star rating CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!--Custom CSS -->
@@ -17,6 +16,8 @@
     <div class="container-fluid">
         <div class="row">
             <h2 class="text-center">NeighborhoodMapProject</h2>
+            <a class="btn btn-info" style="display: table;margin: auto;margin-bottom: 10px;" data-bind="click: resetMap">Reset Map</a>
+            
             <form>
                 <div class="form-group">
                     <input type="text" id="searchbar" name="searchbar" class="form-control" data-bind="textInput: filterSearch">
@@ -94,6 +95,7 @@
     
     
     </script>
+<script src="locationModel.js"></script>
 <script src="new.js"></script>
 
 
