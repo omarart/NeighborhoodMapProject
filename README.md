@@ -3,7 +3,7 @@ Develop a single page application featuring a map of the neighborhood. add funct
 
 ## Getting started
 1. Clone the repository
-1. Open `appMap.html`
+1. Open `new.html`
 
 ## Tools useed
 - Bootstrap
