@@ -37,7 +37,8 @@ Location = function (data) {
             slice.slice(0,2);
             console.log(that.Wikipedia);
             console.log(slice);
-            var blog = 'http://en.wikipedia.org/wiki/' + that.category();
+            // var blog = 'http://en.wikipedia.org/wiki/' + that.category();
+            var blog = reply[3][0];            
             that.information = '<div class="info-content"><h3>' + name + '</h3>' + '<p>' + slice +'</p><p><b>More Visit</b>: <a href="' + blog + '">' + name + '</a></p></div>';
             that.infoWindow.setContent(that.information);
             console.log('sec');
