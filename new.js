@@ -44,8 +44,6 @@ Location = function (data) {
             console.log('sec');
         })
         .fail(function(){
-            that.information = 'sorry, the api dont work';
-            that.infowindow.setContent(that.information);
             console.log('the api dont work');
             $('#map').html('There is an error with wikipedia API ');
         })
